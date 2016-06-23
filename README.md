@@ -10,7 +10,7 @@
 
 ####code
 
-		UIButton *button1 = [UIButton pressButtonWithColor:[UIColor lightGrayColor] frame:frame title:@"NCPressButton" cornerRadius:8];
+	UIButton *button1 = [UIButton pressButtonWithColor:[UIColor lightGrayColor] frame:frame title:@"NCPressButton" cornerRadius:8];
     [self.view addSubview:button1];
     
     UIButton *button2 = [UIButton pressButtonWithImage:[UIImage imageNamed:@"NCIcon"] frame:frame];
