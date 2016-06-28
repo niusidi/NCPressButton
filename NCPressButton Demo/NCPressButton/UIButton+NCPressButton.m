@@ -36,4 +36,15 @@
     return button;
 }
 
++ (UIButton *)pressButtonWithColor:(UIColor *)color frame:(CGRect)frame title:(NSString *)title borderColor:(UIColor *)borderColor borderWidth:(CGFloat)borderWidth cornerRadius:(CGFloat)cornerRadius
+{
+    NCPressButton *button = [[NCPressButton alloc]initWithFrame:frame];
+    button.backgroundColor = color;
+    button.pressButtonCornerRadius = cornerRadius;
+    [button setTitle:title forState:UIControlStateNormal];
+    [button setTitle:title forState:UIControlStateHighlighted];
+    
+    return button;
+}
+
 @end

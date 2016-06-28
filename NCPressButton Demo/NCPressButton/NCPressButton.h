@@ -14,4 +14,7 @@
 @property (nonatomic, strong) UIColor *pressButtonImageColor;
 @property (nonatomic, assign) CGFloat pressButtonCornerRadius;
 
+- (void)setBorderColor:(UIColor *)borderColor state:(UIControlState)state;
+- (void)setBorderWidth:(CGFloat)borderWidth;
+
 @end
