@@ -25,3 +25,6 @@
     
     UIButton *button3 = [UIButton pressButtonWithImage:[UIImage imageNamed:@"NCIcon"] imageColor:[UIColor redColor] frame:frame];
     [self.view addSubview:button3];
+    
+    UIButton *button4 = [UIButton pressButtonWithColor:[UIColor whiteColor] frame:frame title:@"NCPressButton" titleColor:[UIColor blackColor] borderColor:[UIColor blackColor] borderWidth:1 cornerRadius:25];
+    [self.view addSubview:button4];
