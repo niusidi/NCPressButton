@@ -31,22 +31,24 @@
  * @brief The button has the effect of pressing, you can also set the background color & title & corner radius to the button
  * @param color - Button color
  * @param frame - Button frame
- * @param title - Button Title
- * @param cornerRadius - Button Corner Radius
+ * @param title - Button title
+ * @param titleColor - Button title color
+ * @param cornerRadius - Button corner radius
  * @return NCPressButton
  */
-+ (UIButton *)pressButtonWithColor:(UIColor *)color frame:(CGRect)frame title:(NSString *)title cornerRadius:(CGFloat)cornerRadius;
++ (UIButton *)pressButtonWithColor:(UIColor *)color frame:(CGRect)frame title:(NSString *)title titleColor:(UIColor *)titleColor cornerRadius:(CGFloat)cornerRadius;
 
 /**
  * @brief The button has the effect of pressing, you can also set the background color & title & corner & border color & radius & border width to the button
  * @param color - Button color
  * @param frame - Button frame
- * @param title - Button Title
+ * @param title - Button title
+ * @param titleColor - Button title color
  * @param borderColor - Button border color
  * @param borderWidth - Button border width
- * @param cornerRadius - Button Corner Radius
+ * @param cornerRadius - Button corner radius
  * @return NCPressButton
  */
-+ (UIButton *)pressButtonWithColor:(UIColor *)color frame:(CGRect)frame title:(NSString *)title borderColor:(UIColor *)borderColor borderWidth:(CGFloat)borderWidth cornerRadius:(CGFloat)cornerRadius;
++ (UIButton *)pressButtonWithColor:(UIColor *)color frame:(CGRect)frame title:(NSString *)title titleColor:(UIColor *)titleColor borderColor:(UIColor *)borderColor borderWidth:(CGFloat)borderWidth cornerRadius:(CGFloat)cornerRadius;
 
 @end
