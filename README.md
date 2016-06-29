@@ -6,7 +6,7 @@
 
 ---
 
-![NCPressButton GIF](/NCPressButton.gif)
+![NCPressButton GIF](/NCPressButtonGIF.gif)
 
 
 #### Import
