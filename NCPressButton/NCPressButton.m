@@ -13,30 +13,7 @@
 @implementation NCPressButton
 
 #pragma mark
-#pragma mark Touches
-- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
-{
-    [super touchesBegan:touches withEvent:event];
-    [self changeFrameToState:UIControlStateHighlighted];
-    [self changeColorToState:UIControlStateHighlighted];
-}
-
-- (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
-{
-    [super touchesEnded:touches withEvent:event];
-    [self changeFrameToState:UIControlStateNormal];
-    [self changeColorToState:UIControlStateNormal];
-}
-
-- (void)touchesCancelled:(NSSet *)touches withEvent:(UIEvent *)event
-{
-    [super touchesCancelled:touches withEvent:event];
-    [self changeFrameToState:UIControlStateNormal];
-    [self changeColorToState:UIControlStateNormal];
-}
-
-#pragma mark
-#pragma Set Methods
+#pragma mark Set Methods
 - (void)setPressButtonImage:(UIImage *)pressButtonImage
 {
     _pressButtonImage = pressButtonImage;
@@ -62,7 +39,42 @@
 }
 
 #pragma mark
-#pragma Change Status Methods
+#pragma mark Class Methods
+- (void)setBorderColor:(UIColor *)borderColor state:(UIControlState)state
+{
+    self.layer.borderColor = borderColor.CGColor;
+}
+
+- (void)setBorderWidth:(CGFloat)borderWidth
+{
+    self.layer.borderWidth = borderWidth;
+}
+
+#pragma mark
+#pragma mark Touches
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    [super touchesBegan:touches withEvent:event];
+    [self changeFrameToState:UIControlStateHighlighted];
+    [self changeColorToState:UIControlStateHighlighted];
+}
+
+- (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    [super touchesEnded:touches withEvent:event];
+    [self changeFrameToState:UIControlStateNormal];
+    [self changeColorToState:UIControlStateNormal];
+}
+
+- (void)touchesCancelled:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    [super touchesCancelled:touches withEvent:event];
+    [self changeFrameToState:UIControlStateNormal];
+    [self changeColorToState:UIControlStateNormal];
+}
+
+#pragma mark
+#pragma mark Change Status Methods
 - (void)changeFrameToState:(UIControlState)state
 {
     [UIView beginAnimations:@"viewScale" context:nil];

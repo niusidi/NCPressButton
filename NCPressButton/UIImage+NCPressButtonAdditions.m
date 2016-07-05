@@ -29,7 +29,8 @@
     
     [self drawInRect:bounds blendMode:blendMode alpha:1.0f];
     
-    if (blendMode != kCGBlendModeDestinationIn) {
+    if (blendMode != kCGBlendModeDestinationIn)
+    {
         [self drawInRect:bounds blendMode:kCGBlendModeDestinationIn alpha:1.0f];
     }
     

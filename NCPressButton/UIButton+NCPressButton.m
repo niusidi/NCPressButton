@@ -26,13 +26,29 @@
     return button;
 }
 
-+ (UIButton *)pressButtonWithColor:(UIColor *)color frame:(CGRect)frame title:(NSString *)title cornerRadius:(CGFloat)cornerRadius
++ (UIButton *)pressButtonWithColor:(UIColor *)color frame:(CGRect)frame title:(NSString *)title titleColor:(UIColor *)titleColor cornerRadius:(CGFloat)cornerRadius
 {
     NCPressButton *button = [[NCPressButton alloc]initWithFrame:frame];
     button.backgroundColor = color;
     button.pressButtonCornerRadius = cornerRadius;
     [button setTitle:title forState:UIControlStateNormal];
     [button setTitle:title forState:UIControlStateHighlighted];
+    [button setTitleColor:titleColor forState:UIControlStateNormal];
+    [button setTitleColor:titleColor forState:UIControlStateHighlighted];
+    return button;
+}
+
++ (UIButton *)pressButtonWithColor:(UIColor *)color frame:(CGRect)frame title:(NSString *)title titleColor:(UIColor *)titleColor borderColor:(UIColor *)borderColor borderWidth:(CGFloat)borderWidth cornerRadius:(CGFloat)cornerRadius
+{
+    NCPressButton *button = [[NCPressButton alloc]initWithFrame:frame];
+    button.backgroundColor = color;
+    button.pressButtonCornerRadius = cornerRadius;
+    [button setTitle:title forState:UIControlStateNormal];
+    [button setTitle:title forState:UIControlStateHighlighted];
+    [button setBorderWidth:borderWidth];
+    [button setBorderColor:borderColor state:UIControlStateNormal];
+    [button setTitleColor:titleColor forState:UIControlStateNormal];
+    [button setTitleColor:titleColor forState:UIControlStateHighlighted];
     return button;
 }
 
